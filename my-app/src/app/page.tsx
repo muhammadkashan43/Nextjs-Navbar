@@ -1,40 +1,16 @@
-import Link from "next/link";
-const Navbar = () => {
+'use client'
+import Header from "./Component/header";
+import style from "./styles/page.module.css";
+const home = () => {
   return (
-    <div className="hero">
-      <nav>
-        <h1 className="logo">Mr <span>Pro</span> :)</h1>
-        <ul>
-          <li>
-            <a href="#">
-              <Link href="/">Home</Link>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Link href="./about-us">About</Link>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Link href="./service">Service</Link>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Link href="./Portfolio">Portfolio</Link>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Link href="./contact-us">Contact</Link>
-            </a>
-          </li>
-        </ul>
-        <button type="button">Let&apos;s go</button>
-      </nav>
+    <div className={style.hero}>
+      
+      <Header />
+      <div className="card">
+        <h2>This is home page</h2>
+      </div>
     </div>
   );
 };
 
-export default Navbar;
+export default home;
